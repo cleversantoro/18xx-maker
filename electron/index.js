@@ -226,7 +226,9 @@ ipcMain.on("export-pdf", (event, game, items) => {
         },
         { concurrency: 4 }
       )
-        .then(() => alert("success", `Exported ${game} to ${directory} as pdf`))
+        .then(() =>
+          alert("success", `${game} Exportado para ${directory} como pdf`)
+        )
         .then(() => shell.openPath(directory))
         .catch(console.error.bind(console));
     }

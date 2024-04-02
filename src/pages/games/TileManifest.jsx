@@ -21,14 +21,14 @@ import "../../TileManifest.css";
 
 const getCol = tile => {
   switch (tile.color) {
-  case "yellow":
-    return 1;
-  case "green":
-    return 2;
-  case "brown":
-    return 3;
-  default:
-    return 4;
+    case "yellow":
+      return 1;
+    case "green":
+      return 2;
+    case "brown":
+      return 3;
+    default:
+      return 4;
   }
 };
 
@@ -82,7 +82,7 @@ const TileManifest = () => {
   return (
     <ColorContext.Provider value="tile">
       <div className="TileManifest printElement">
-        <div className="TileManifest--Title">{game.info.title} Tile Manifest</div>
+        <div className="TileManifest--Title">{game.info.title} Opções de Trilhos</div>
         {tileNodes}
       </div>
     </ColorContext.Provider>

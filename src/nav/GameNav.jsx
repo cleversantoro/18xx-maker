@@ -280,7 +280,7 @@ const GameNav = () => {
           selected={!!matchPath(location.pathname, { path: '/games/:slug/tile-manifest' })}
           component={RouterLink}
           to={`/games/${game.slug}/tile-manifest`}>
-          <ListItemText primary="Quantidade de Trilhos" />
+          <ListItemText primary="Opções de Trilhos" />
         </ListItem>
         <ListItem button
           disabled={!game.tiles}

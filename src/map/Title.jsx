@@ -72,7 +72,7 @@ const Title = ({ game, variation, hexWidth }) => {
             x="0"
             y={designerSize + 10 + (game.info.subtitle ? (subtitleSize + 10) : 0)}
           >
-            by {game.info.designer}
+            por {game.info.designer}
             {mapName && ` ⋯ ${mapName}`}
           </text>
         </g>

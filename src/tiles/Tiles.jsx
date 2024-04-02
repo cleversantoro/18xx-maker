@@ -10,7 +10,7 @@ import Tile from "../Tile";
 import Svg from "../Svg";
 import ColorContext from "../context/ColorContext";
 
-const Tiles = ({color}) => {
+const Tiles = ({ color }) => {
   let [tileFilter, setTileFilter] = useState("");
 
   let ids = R.sortWith(
@@ -33,10 +33,10 @@ const Tiles = ({color}) => {
     return (
       <Link to={`/tile/${id}`}>
         <Svg key={id}
-             width="200"
-             height="200"
-             viewBox="-100 -100 200 200"
-             transform="rotate(-90)">
+          width="200"
+          height="200"
+          viewBox="-100 -100 200 200"
+          transform="rotate(-90)">
           <Tile id={id} width={150} x={0} y={0} />
         </Svg>
       </Link>
@@ -50,9 +50,9 @@ const Tiles = ({color}) => {
   return (
     <ColorContext.Provider value="tile">
       <div className="tiles">
-        <h3>All Tiles</h3>
+        <h3>Todos os Trilhos</h3>
         <label>
-          Filter: <input type="text" value={tileFilter} onChange={handleChange}/>
+          Filter: <input type="text" value={tileFilter} onChange={handleChange} />
         </label>
         {tileNodes}
       </div>
