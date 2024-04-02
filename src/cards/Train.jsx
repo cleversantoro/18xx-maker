@@ -63,10 +63,10 @@ const Train = ({ train, trains, blackBand }) => {
   priceFontFamily = defaultTo("display", priceFontFamily);
   let priceFontSizeInch = defaultTo( 0.25, priceFontSize / 72);
 
-  phasedText = defaultTo("Phased out by", phasedText);
-  obsoletedText = defaultTo("Obsoleted by", obsoletedText);
-  rustedText = defaultTo("Rusted by", rustedText);
-  permanentText = defaultTo("Permanent", permanentText);
+  phasedText = defaultTo("Descontinuado por", phasedText);
+  obsoletedText = defaultTo("Obsoleto por", obsoletedText);
+  rustedText = defaultTo("Enferrujado por", rustedText);
+  permanentText = defaultTo("Permanente", permanentText);
 
   longevityFontFamily = defaultTo("display", longevityFontFamily);
   let longevityFontSizeInch = defaultTo(0.18, longevityFontSize / 72);

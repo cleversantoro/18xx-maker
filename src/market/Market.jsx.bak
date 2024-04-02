@@ -203,7 +203,7 @@ const Market = ({data, game, config, title, displayTitle}) => {
           x="0"
           y="12.5"
         >
-          {title} Bolsa de Valores
+          {title} Stock Market
         </text>
       )}
       {roundTracker}

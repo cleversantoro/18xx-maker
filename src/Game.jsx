@@ -43,7 +43,7 @@ const Game = () => {
       {game.wip && (
         <div className="WIP">
           <div>
-            <p>This game is a work in progress. It is not fully implemented</p>
+            <p>Este jogo é um trabalho em andamento. Não está totalmente implementado.</p>
           </div>
         </div>
       )}
@@ -76,7 +76,7 @@ const Game = () => {
           <MapPaginated />
         </Route>
         <Route path="/:game/market" exact>
-         <MarketSingle />
+          <MarketSingle />
         </Route>
         <Route path="/:game/market-paginated">
           <MarketPaginated />

@@ -69,8 +69,7 @@ const Private = (props) => {
 
   //let nameFontSizeInch = defaultTo(0.18, nameFontSize / 72);
   let nameFS = defaultTo(17.28, nameFontSize / px2pt); // 0.18" == 12.96pt == 17.28px
-  let nameFont = getFontProps(props,
-                              nameFS, nameFontWeight, nameFontFamily, nameFontStyle);
+  let nameFont = getFontProps(props,nameFS, nameFontWeight, nameFontFamily, nameFontStyle);
   let nameLineHeight = nameFS + lineHeightAdd;
   nameColor = multiDefaultTo("black", nameColor, fontColor);
 
@@ -273,7 +272,7 @@ const Private = (props) => {
                                          lineHeight: `${revenueLineHeight}px`,
                                          ...revenueFont
                                        }}>
-                                    Revenue: {revenueNode}
+                                    Receita: {revenueNode}
                                   </div>}
                   {variant && <div className="private__variant"
                                    style={{

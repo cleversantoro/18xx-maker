@@ -29,27 +29,27 @@ const IPO = () => {
           <Color context="companies">
             {c => (
               <div className="ipo"
-                   style={{
-                     width: unitsToCss(config.paper.width),
-                     height: unitsToCss(config.paper.height),
-                     margin: unitsToCss(config.paper.margins),
-                   }}>
+                style={{
+                  width: unitsToCss(config.paper.width),
+                  height: unitsToCss(config.paper.height),
+                  margin: unitsToCss(config.paper.margins),
+                }}>
                 <h2>{game.info.title} Initial Public Offering</h2>
                 <div className="ipo__companies">
                   {map(
                     company => (
                       <div key={`ipo-${company.abbrev}`}
-                           className="ipo__company"
-                           style={{
-                             borderRadius: unitsToCss(config.ipo.borderRadius),
-                             width: unitsToCss(config.cards.width),
-                             height: unitsToCss(config.cards.height),
-                             backgroundColor: company.color ? c(company.color) : c("plain")
-                           }}>
+                        className="ipo__company"
+                        style={{
+                          borderRadius: unitsToCss(config.ipo.borderRadius),
+                          width: unitsToCss(config.cards.width),
+                          height: unitsToCss(config.cards.height),
+                          backgroundColor: company.color ? c(company.color) : c("plain")
+                        }}>
                         <div className="ipo__token"
-                             style={{
-                               margin: `${unitsToCss((config.cards.height - 60) / 2)} auto`
-                             }}>
+                          style={{
+                            margin: `${unitsToCss((config.cards.height - 60) / 2)} auto`
+                          }}>
                           <ColorContext.Provider value="companies">
                             <Svg viewBox="-25 -25 50 50">
                               <GameCompanyToken abbrev={company.abbrev} outline="white" />
@@ -58,10 +58,10 @@ const IPO = () => {
                         </div>
                       </div>
                     ),
-                    companies
+                    empresas
                   )}
                 </div>
-                <PageSetup/>
+                <PageSetup />
               </div>
             )}
           </Color>

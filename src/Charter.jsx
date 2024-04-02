@@ -171,7 +171,7 @@ const Charter = ({
                 )}
                 {halfWidth || (
                   <div className="charter__trains">
-                    {showTrains && "Trains"}
+                    {showTrains && "Trens"}
                     {showPhaseChart && (
                       <div className="charter__phase">
                         <Phase phases={phases}
@@ -184,7 +184,7 @@ const Charter = ({
                 )}
                 {halfWidth || (
                   <div className="charter__treasury">
-                    {showTreasury && "Treasury"}
+                    {showTreasury && "Tesouro"}
                     {company.capital && (
                       <div className="charter__capital">
                         <Currency value={company.capital} type="treasury"/>

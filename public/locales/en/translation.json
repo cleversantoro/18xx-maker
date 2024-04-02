@@ -1,62 +1,62 @@
 {
   "title": "18xx Maker",
-  "about": "This app can take 18xx game definitions written in json, display them, and render them for printing. The original intent of this site was for personal PnP projects, but the purpose has shifted over time to prototyping new games.",
+  "about": "Este aplicativo pode pegar definições de jogos 18xx escritas em json, exibi-las e renderizá-las para impressão. A intenção original deste site era para projetos PnP pessoais, mas o propósito mudou com o tempo para a prototipagem de novos jogos.",
   "browser": "Browser",
   "app": "App",
-  "important": "Important",
-  "note": "Note",
-  "piracy": "Do not use this app to print games that you don't have a license to print. Please support our 18xx designers, developers, and publishers.",
+  "important": "Importante",
+  "note": "Nota",
+  "piracy": "Não use este aplicativo para imprimir jogos para os quais você não tem licença para imprimir. Por favor, apoie nossos designers, desenvolvedores e editores 18xx.",
   "download": "Download",
-  "save": "Save",
-  "show": "Show",
+  "save": "Salvar",
+  "show": "Mostrar",
   "nav": {
     "menu": "Menu",
-    "home": "Home",
-    "load": "Load Games",
-    "elements": "Elements",
-    "docs": "Help"
+    "home": "Início",
+    "load": "Carregar jogos",
+    "elements": "Elementos",
+    "docs": "Ajuda"
   },
   "prototype": {
-    "prototype": "Prototype",
-    "description": "This game is still being developed"
+    "prototype": "Prototipo",
+    "description": "Este jogo ainda está sendo desenvolvido"
   },
   "wip": {
-    "wip": "Work in progress",
-    "note": "Some games are still works in progress. Please submit any bugs found as <github>issues on Github</github>!",
-    "tooltip": "This game is marked as being a work in progress",
-    "description": "This game might not be complete or accurate"
+    "wip": "Trabalho em progresso",
+    "note": "Alguns jogos ainda estão em andamento. Envie quaisquer bugs encontrados como <github>issues no Github</github>!",
+    "tooltip": "Este jogo está marcado como um trabalho em andamento",
+    "description": "Este jogo pode não estar completo ou preciso"
   },
   "export": {
-    "allPdf": "Export game as pdf documents",
-    "allPng": "Export game as png images",
-    "singlePdf": "Export this component as a pdf document",
-    "singlePng": "Export this component as a png image"
+    "allPdf": "Exportar jogo como documentos PDF",
+    "allPng": "Exportar jogo como imagens PNG",
+    "singlePdf": "Exportar este componente como um documento PDF",
+    "singlePng": "Exportar este componente como uma imagem png"
   },
   "docs": {
     "help": {
-      "title": "Help",
-      "description": "18xx Maker Goals and Links"
+      "title": "Ajuda",
+      "description": "Metas e links do 18xx Maker"
     },
     "developing": {
-      "title": "Developing",
-      "description": "Programming with 18xx Maker"
+      "title": "Desenvolvimento",
+      "description": "Programando com 18xx Maker"
     },
     "translation": {
-      "title": "Translation",
-      "description": "Help translate 18xx Maker"
+      "title": "Tradução",
+      "description": "Ajude a traduzir o 18xx Maker"
     },
     "output": {
       "pdf": {
-        "title": "PDF Output",
-        "description": "Generate PDF documents"
+        "title": "Saída PDF",
+        "description": "Gerar documentos PDF"
       },
       "png": {
-        "title": "PNG Output",
-        "description": "Generate PNG images"
+        "title": "Saída PNG",
+        "description": "Gerar imagens PNG"
       },
       "b18": {
-        "title": "Board18 Output",
-        "description": "Generate Board18 game boxes"
+        "title": "Saída Board18",
+        "description": "Gere caixas de jogo Board18"
       }
     },
     "games": {
@@ -102,10 +102,10 @@
   },
   "elements": {
     "tiles": {
-      "title": "Tiles",
-      "description": "18xx tiles from all games",
+      "title": "Hexágonos",
+      "description": "Trilhos 18xx de todos os jogos",
       "page": {
-        "description": "This page shows all of the generic tiles that 18xx Maker knows about."
+        "description": "Esta página mostra todos Hexágonos que o 18xx Maker conhece."
       },
       "filter": {
         "title": "Tile Filter",
@@ -121,76 +121,76 @@
       }
     },
     "atoms": {
-      "title": "Map Elements",
-      "description": "Basic atoms for maps and tiles",
+      "title": "Elementos do Mapa",
+      "description": "Hexagonos básicos para mapas e blocos",
       "page": {
-        "description": "This page shows examples of all items that you can display on either map hexes or tiles. Use these examples to help prototype your game!"
+        "description": "Esta página mostra exemplos de todos os itens que você pode exibir em hexágonos ou blocos do mapa. Use estes exemplos para ajudar a criar um protótipo do seu jogo!"
       }
     },
     "logos": {
-      "title": "Company Logos",
-      "description": "Included train company logos",
+      "title": "Logos das Empresas",
+      "description": "Logotipos de empresas ferroviárias incluídos",
       "page": {
-        "description": "Here are all of the SVG logos bundled with 18xx Maker."
+        "description": "Aqui estão todos os logotipos SVG incluídos no 18xx Maker."
       }
     },
     "cheat": {
-      "title": "Cheat Sheet",
-      "description": "Data from included 18xx games"
+      "title": "Folha de dicas",
+      "description": "Dados dos jogos 18xx incluídos"
     }
   },
   "game": {
     "bgg": "Board Game Geek",
-    "by": "by",
+    "by": "por",
     "cards": {
-      "privates": "Privates",
-      "shares": "Shares",
-      "trains": "Trains",
-      "numbers": "Number Cards"
+      "privates": "Privados",
+      "shares": "Ações",
+      "trains": "Trens",
+      "numbers": "Cartões Numéricos"
     },
     "license": {
-      "primary": "License Information",
-      "secondary": "Please read before printing"
+      "primary": "Informações sobre licença",
+      "secondary": "Por favor leia antes de imprimir"
     },
-    "load": "Load Game",
-    "loadDescription": "Open another game",
+    "load": "Carregar jogo",
+    "loadDescription": "Abra outro jogo",
     "map": {
-      "variation": "Map Variation"
+      "variation": "Variantes do Mapa"
     },
-    "paginated": "Paginate",
-    "players": "Players",
+    "paginated": "Paginar",
+    "players": "Jogadores",
     "purchase": {
-      "primary": "Purchase",
-      "secondary": "Where to buy this game"
+      "primary": "Comprar",
+      "secondary": "Onde comprar este jogo"
     },
-    "rules": "Rules",
-    "unload": "Unload Game"
+    "rules": "Regras",
+    "unload": "Descarregar jogo"
   },
   "gtg": {
-    "title": "Partnership with Grand Trunk Games",
-    "description": "<gtg>Grand Trunk Games</gtg> is a new publisher and a big supporter of print and play. They have decided to make all of their games available on 18xx-maker as the official print and play provider! If you are able to we highly recommend supporting this publisher by purchasing their excellent production of 1861/67 and the upcoming 1889!"
+    "title": "Parceria com Grand Trunk Games",
+    "description": "<gtg>Grand Trunk Games</gtg> é uma nova editora e uma grande apoiadora do print and play. Eles decidiram disponibilizar todos os seus jogos no 18xx-maker como o fornecedor oficial de impressão e jogo! Se você puder, recomendamos apoiar esta editora comprando sua excelente produção de 1861/67 e a próxima de 1889!"
   },
   "usage": {
-    "title": "Usage",
-    "description": "You can use this app in your browser at it's <public>main website</public> or <app>download it as an app</app> to use some of it's more advanced features. If you are working on prototyping your own game we highly recommend you download the app."
+    "title": "Uso",
+    "description": "Você pode usar este aplicativo em seu navegador em seu <public>site principal</public> ou <app>baixá-lo como um aplicativo</app> para usar alguns de seus recursos mais avançados. Se você está trabalhando na prototipagem de seu próprio jogo, recomendamos fortemente que você baixe o aplicativo."
   },
   "features": {
-    "title": "Features",
-    "1": "Load an 18xx Maker game file and display it.",
-    "2": "Inspect our database of 18xx tiles.",
-    "3": "Render games with your own design choices with themes and configuration options.",
-    "4": "Quickly design new games making use of our extensive set of elements and logos.",
+    "title": "Características",
+    "1": "Carregue um arquivo de jogo 18xx Maker e exiba-o.",
+    "2": "Inspecione nosso banco de dados de peças 18xx.",
+    "3": "Renderize jogos com suas próprias opções de design com temas e opções de configuração.",
+    "4": "Projete rapidamente novos jogos usando nosso extenso conjunto de elementos e logotipos.",
     "browser": {
-      "1": "Print components directly from your web browser."
+      "1": "Imprima componentes diretamente do seu navegador da web."
     },
     "app": {
-      "1": "Live reloading of games as you edit definition files.",
-      "2": "Export full games or individual components as PDF documents or PNG images.",
-      "3": "Export games as Board18 game boxes."
+      "1": "Recarregamento ao vivo de jogos enquanto você edita arquivos de definição.",
+      "2": "Exporte jogos completos ou componentes individuais como documentos PDF ou imagens PNG.",
+      "3": "Exporte jogos como caixas de jogos Board18."
     }
   },
   "donations": {
-    "title": "Donations",
-    "description": "I've been asked about donation buttons; if you find this software useful to you and would like to donate money towards its development you can do so via <paypal>Paypal</paypal> or <cash>Square Cash</cash>."
+    "title": "Doações",
+    "description": "Fui questionado sobre botões de doação; se você achar este software útil e quiser doar dinheiro para seu desenvolvimento, você pode fazê-lo via <paypal>Paypal</paypal> ou <cash>Square Cash</cash>."
   }
 }

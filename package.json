@@ -36,7 +36,7 @@
     "start": "run-p generate:config watch:games watch:icons watch:logos watch:themes start:react",
     "start:react": "react-scripts --openssl-legacy-provider start ",
     "start:app": "run-p start:electron start:nobrowser",
-    "start:electron": "wait-on http://localhost:3000 && electron .",
+    "start:electron": "wait-on http://127.0.0.1:3000 && electron .",
     "start:nobrowser": "cross-env BROWSER=none yarn start",
     "svgo": "yarn svgo:icons && yarn svgo:logos",
     "svgo:icons": "svgo --pretty -f src/data/icons",
