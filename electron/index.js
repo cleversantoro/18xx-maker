@@ -258,7 +258,9 @@ ipcMain.on("export-png", (event, game, items) => {
         },
         { concurrency: 8 }
       )
-        .then(() => alert("success", `Exported ${game} to ${directory} as png`))
+        .then(() =>
+          alert("success", `${game} Exportado para ${directory} como png`)
+        )
         .then(() => shell.openPath(directory))
         .catch(console.error.bind(console));
     }
