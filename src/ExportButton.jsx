@@ -52,23 +52,23 @@ export const maxPlayers = compose(
 
 const pngItems = (game, config) => {
   let items = {
-    "background": `${game.id}-background.png`,
-    "revenue": `${game.id}-revenue.png`,
+    "background": `${game.id}-fundo.png`,
+    "revenue": `${game.id}-remdimentos.png`,
   };
 
   // Number Cards
   forEach(n => {
-    items[`cards/number/${n}`] = `${game.id}-card-number-${n}.png`;
+    items[`cards/number/${n}`] = `${game.id}-jogador-numero-${n}.png`;
   }, range(1, maxPlayers(game.players || []) + 1))
 
   // Privates
   for(let i=0; i<(game.privates || []).length; i++) {
-    items[`cards/private/${i}`] = `${game.id}-card-private-${i+1}.png`;
+    items[`cards/private/${i}`] = `${game.id}-empresa-privado-${i+1}.png`;
   }
 
   // Trains
   for(let i=0; i<(game.trains || []).length; i++) {
-    items[`cards/train/${i}`] = `${game.id}-card-train-${i+1}-${game.trains[i].name.replace(" ", "_")}.png`;
+    items[`cards/train/${i}`] = `${game.id}-cartao-trem-${i+1}-${game.trains[i].name.replace(" ", "_")}.png`;
   }
 
   // Shares
@@ -77,11 +77,11 @@ const pngItems = (game, config) => {
   let companies = overrideCompanies(compileCompanies(game), override, selection) || [];
   let shares = flatten(map(c => map(s => assoc('company', c, s), c.shares || []), companies))
   for(let i=0; i<shares.length; i++) {
-    items[`cards/share/${i}`] = `${game.id}-card-share-${i+1}-${shares[i].company.abbrev}.png`;
+    items[`cards/share/${i}`] = `${game.id}-cartao-acao-${i+1}-${shares[i].company.abbrev}.png`;
   }
 
   for(let i=0; i<companies.length; i++) {
-    items[`charters/${i}`] = `${game.id}-charter-${i+1}-${companies[i].abbrev}.png`;
+    items[`charters/${i}`] = `${game.id}-empresa-${i+1}-${companies[i].abbrev}.png`;
   }
 
   for(let i=0; i<companies.length; i++) {
@@ -95,16 +95,16 @@ const pngItems = (game, config) => {
   if (game.map) {
     if (is(Array, game.map)) {
       for(let i=0; i<game.map.length; i++) {
-        items[`map?variation=${i}`] = `${game.id}-map-${i}.png`;
+        items[`map?variation=${i}`] = `${game.id}-mapa-${i}.png`;
       }
     } else {
-      items["map"] = `${game.id}-map.png`;
+      items["map"] = `${game.id}-mapa.png`;
     }
   }
 
   if (game.stock) {
     if (game.stock.market) {
-      items["market"] = `${game.id}-market.png`;
+      items["market"] = `${game.id}-BolsadeValores.png`;
     }
 
     if (game.stock.par && game.stock.par.values) {
@@ -113,10 +113,10 @@ const pngItems = (game, config) => {
   }
 
   if (game.tiles) {
-    items["tile-manifest"] = `${game.id}-tile-manifest.png`;
+    items["tile-manifest"] = `${game.id}-trilho-opcoes.png`;
 
     forEach(id => {
-      items[`tiles/${id}`] = `${game.id}-tile-${id}.png`;
+      items[`tiles/${id}`] = `${game.id}-trilho-${id}.png`;
     }, keys(game.tiles));
   }
 
@@ -125,17 +125,17 @@ const pngItems = (game, config) => {
 
 const pdfItems = (game, config) => {
   let items = {
-    "background": `${game.id}-background.pdf`,
-    "revenue": `${game.id}-revenue.pdf`,
-    "revenue?paginated=true": `${game.id}-revenue-paginated.pdf`,
+    "background": `${game.id}-fundo.pdf`,
+    "revenue": `${game.id}-rendimentos.pdf`,
+    "revenue?paginated=true": `${game.id}-rendimentos-paginado.pdf`,
   };
 
   if (config.export.allLayouts) {
     forEach(layout => {
-      items[`cards?config.cards.layout=${layout}`] = `${game.id}-cards-${layout}.pdf`;
+      items[`cards?config.cards.layout=${layout}`] = `${game.id}-cartoes-${layout}.pdf`;
     }, schema.properties.cards.properties.layout.enum);
   } else {
-    items["cards"] = `${game.id}-cards.pdf`;
+    items["cards"] = `${game.id}-cartao.pdf`;
   }
 
   if (game.companies || game.tokens) {
@@ -149,42 +149,42 @@ const pdfItems = (game, config) => {
   }
 
   if (game.companies) {
-    items["charters"] = `${game.id}-charters.pdf`;
+    items["charters"] = `${game.id}-empresas.pdf`;
   }
 
   if (game.map) {
     if (is(Array, game.map)) {
       for(let i=0; i<game.map.length; i++) {
-        items[`map?variation=${i}`] = `${game.id}-map-${i}.pdf`;
-        items[`map?paginated=true&variation=${i}`] = `${game.id}-map-${i}-paginated.pdf`;
+        items[`map?variation=${i}`] = `${game.id}-mapa-${i}.pdf`;
+        items[`map?paginated=true&variation=${i}`] = `${game.id}-mapa-${i}-paginado.pdf`;
       }
     } else {
       items["map"] = `${game.id}-map.pdf`;
-      items["map?paginated=true"] = `${game.id}-map-paginated.pdf`;
+      items["map?paginated=true"] = `${game.id}-mapa-paginado.pdf`;
     }
   }
 
   if (game.stock) {
     if (game.stock.market) {
-      items["market"] = `${game.id}-market.pdf`;
-      items["market?paginated=true"] = `${game.id}-market-paginated.pdf`;
+      items["market"] = `${game.id}-BolsadeValores.pdf`;
+      items["market?paginated=true"] = `${game.id}-BolsadeValores-paginado.pdf`;
     }
 
     if (game.stock.par && game.stock.par.values) {
       items["par"] = `${game.id}-par.pdf`;
-      items["par?paginated=true"] = `${game.id}-par-paginated.pdf`;
+      items["par?paginated=true"] = `${game.id}-par-paginado.pdf`;
     }
   }
 
   if (game.tiles) {
-    items["tile-manifest"] = `${game.id}-tile-manifest.pdf`;
+    items["tile-manifest"] = `${game.id}-opcoes-trilho.pdf`;
 
     if (config.export.allLayouts) {
       forEach(layout => {
-        items[`tiles?config.tiles.layout=${layout}`] = `${game.id}-tiles-${layout}.pdf`;
+        items[`tiles?config.tiles.layout=${layout}`] = `${game.id}-trilhos-${layout}.pdf`;
       }, schema.properties.tiles.properties.layout.enum);
     } else {
-      items["tiles"] = `${game.id}-tiles.pdf`;
+      items["tiles"] = `${game.id}-trilhos.pdf`;
     }
   }
 

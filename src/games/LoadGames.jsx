@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     borderColor: theme.palette.grey[500],
     backgroundColor: theme.palette.grey[300],
     height: 200,
-    margin: theme.spacing(4,0),
+    margin: theme.spacing(4, 0),
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -78,10 +78,10 @@ const LoadGames = () => {
 
       if (publisher.link) {
         linkNode = <Link rel="noreferrer"
-                         target="_blank"
-                         href={publishers[game.publisher].link}>
-                     {publishers[game.publisher].name}
-                   </Link>;
+          target="_blank"
+          href={publishers[game.publisher].link}>
+          {publishers[game.publisher].name}
+        </Link>;
       } else {
         linkNode = publisher.name;
       }
@@ -90,10 +90,10 @@ const LoadGames = () => {
         let imageUrl = require(`../data/publishers/${game.publisher}.png`);
         if (publisher.link) {
           imageNode = <Link rel="noreferrer"
-                            target="_blank"
-                            href={publishers[game.publisher].link}>
-                        <img alt={`${publisher.name} Logo`} src={imageUrl} />
-                      </Link>;
+            target="_blank"
+            href={publishers[game.publisher].link}>
+            <img alt={`${publisher.name} Logo`} src={imageUrl} />
+          </Link>;
         } else {
           imageNode = <img alt={`${publisher.name} Logo`} src={imageUrl} />;
         }
@@ -105,7 +105,7 @@ const LoadGames = () => {
         <TableCell>
           {linkNode}
         </TableCell>
-        <TableCell style={{textAlign: "center"}}>
+        <TableCell style={{ textAlign: "center" }}>
           {imageNode}
         </TableCell>
       </>
@@ -115,11 +115,11 @@ const LoadGames = () => {
       <TableRow key={id}>
         <TableCell>
           <Link component={RouterLink}
-                variant="h5"
-                to={`/games/${game.slug}/map`}>
+            variant="h5"
+            to={`/games/${game.slug}/map`}>
             {game.title}
           </Link>
-          {game.subtitle && <><br/>{game.subtitle}</>}
+          {game.subtitle && <><br />{game.subtitle}</>}
         </TableCell>
         <TableCell>{game.designer}</TableCell>
         {publisherNode}
@@ -151,23 +151,23 @@ const LoadGames = () => {
   return (
     <Container maxWidth="md">
       <Paper className={classes.DropBox}
-             onDragOver={dragOverHandler}
-             onDrop={dropHandler}
-             elevation={10}>
-        <Typography variant="h4" align="center" color="textSecondary">Drop any game json here to load it!</Typography>
+        onDragOver={dragOverHandler}
+        onDrop={dropHandler}
+        elevation={10}>
+        <Typography variant="h4" align="center" color="textSecondary">Solte qualquer json de jogo aqui para carregá-lo!</Typography>
       </Paper>
       <Paper className={classes.page} elevation={10}>
-        <Typography variant="h3">Bundled Games</Typography>
+        <Typography variant="h3">Jogos incluídos</Typography>
         <Typography variant="body1">
-          These games come bundled with 18xx Maker. Please make sure to show your support to the designers and publishers!
+          Esses jogos vêm com o 18xx Maker. Certifique-se de mostrar seu apoio aos designers e editores!
         </Typography>
         <TableContainer className={classes.games}>
           <Table stickyHeader>
             <TableHead>
               <TableRow>
-                <TableCell>Title</TableCell>
+                <TableCell>Titulo</TableCell>
                 <TableCell>Designer</TableCell>
-                <TableCell colSpan={2}>Publisher</TableCell>
+                <TableCell colSpan={2}>Editora</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

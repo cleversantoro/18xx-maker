@@ -91,7 +91,7 @@ const server = app.listen(9000);
 
       switch (item) {
         case "cards":
-          filename = `${game}-cards-${cardsLayout}.pdf`;
+          filename = `${game}-cartoes-${cardsLayout}.pdf`;
           if (
             !gameDef.companies &&
             !gameDef.privates &&
@@ -108,21 +108,21 @@ const server = app.listen(9000);
           }
           break;
         case "map?paginated=true":
-          filename = `${game}-map-paginated.pdf`;
+          filename = `${game}-mapa-paginado.pdf`;
         case "map":
           if (!gameDef.map) {
             hasData = false;
           }
           break;
         case "market?paginated=true":
-          filename = `${game}-market-paginated.pdf`;
+          filename = `${game}-bolsadevalores-paginado.pdf`;
         case "market":
           if (!gameDef.stock) {
             hasData = false;
           }
           break;
         case "par?paginated=true":
-          filename = `${game}-par-paginated.pdf`;
+          filename = `${game}-par-paginado.pdf`;
         case "par":
           if (
             !gameDef.stock ||
@@ -133,10 +133,10 @@ const server = app.listen(9000);
           }
           break;
         case "revenue?paginated=true":
-          filename = `${game}-revenue-paginated.pdf`;
+          filename = `${game}-rendimentos-paginado.pdf`;
           break;
         case "tiles":
-          filename = `${game}-tiles-${tilesLayout}.pdf`;
+          filename = `${game}-trilhos-${tilesLayout}.pdf`;
         case "tile-manifest":
           if (!gameDef.tiles) {
             hasData = false;
